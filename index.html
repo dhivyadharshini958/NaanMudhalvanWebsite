@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Club Management Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Campus<span>Clubs</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#clubs">Clubs</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>College Club Management Portal</h1>
+
+            <p>
+                Discover clubs, join communities, participate in events,
+                and develop your skills beyond the classroom.
+            </p>
+
+            <a href="#clubs" class="btn">Explore Clubs</a>
+        </div>
+    </section>
+
+
+    <!-- Clubs Section -->
+    <section id="clubs" class="section">
+
+        <div class="section-title">
+            <h2>Our College Clubs</h2>
+            <p>Explore different clubs and find the one that interests you.</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-container">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search clubs..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Technical">Technical</option>
+                <option value="Cultural">Cultural</option>
+                <option value="Sports">Sports</option>
+                <option value="Literary">Literary</option>
+                <option value="Social">Social</option>
+            </select>
+
+        </div>
+
+
+        <!-- Club Cards -->
+        <div id="clubContainer" class="club-container">
+
+            <div class="club-card"
+                 data-name="Coding Club"
+                 data-category="Technical">
+
+                <div class="club-icon">💻</div>
+
+                <h3>Coding Club</h3>
+
+                <p class="category">Technical</p>
+
+                <p>
+                    A community for students interested in programming,
+                    web development, and competitive coding.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Coding Club')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="club-card"
+                 data-name="Photography Club"
+                 data-category="Cultural">
+
+                <div class="club-icon">📷</div>
+
+                <h3>Photography Club</h3>
+
+                <p class="category">Cultural</p>
+
+                <p>
+                    Learn photography techniques, participate in photo walks,
+                    and showcase your creative work.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Photography Club')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="club-card"
+                 data-name="Sports Club"
+                 data-category="Sports">
+
+                <div class="club-icon">⚽</div>
+
+                <h3>Sports Club</h3>
+
+                <p class="category">Sports</p>
+
+                <p>
+                    Participate in football, cricket, basketball,
+                    athletics, and other sporting activities.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Sports Club')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="club-card"
+                 data-name="Literary Club"
+                 data-category="Literary">
+
+                <div class="club-icon">📚</div>
+
+                <h3>Literary Club</h3>
+
+                <p class="category">Literary</p>
+
+                <p>
+                    Improve writing and communication skills through
+                    debates, poetry, essay writing, and discussions.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Literary Club')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="club-card"
+                 data-name="Music Club"
+                 data-category="Cultural">
+
+                <div class="club-icon">🎵</div>
+
+                <h3>Music Club</h3>
+
+                <p class="category">Cultural</p>
+
+                <p>
+                    A platform for singers, musicians, and music lovers
+                    to perform and collaborate.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Music Club')">
+                    View Details
+                </button>
+
+            </div>
+
+
+            <div class="club-card"
+                 data-name="Social Service Club"
+                 data-category="Social">
+
+                <div class="club-icon">🤝</div>
+
+                <h3>Social Service Club</h3>
+
+                <p class="category">Social</p>
+
+                <p>
+                    Participate in community service, awareness campaigns,
+                    donation drives, and social initiatives.
+                </p>
+
+                <button class="details-btn"
+                        onclick="showClubDetails('Social Service Club')">
+                    View Details
+                </button>
+
+            </div>
+
+        </div>
+
+        <p id="noResults" class="no-results">
+            No clubs found.
+        </p>
+
+    </section>
+
+
+    <!-- Events Section -->
+    <section id="events" class="section events-section">
+
+        <div class="section-title">
+            <h2>Upcoming Events</h2>
+            <p>Stay updated with the latest club activities.</p>
+        </div>
+
+        <div class="event-container">
+
+            <div class="event-card">
+                <div class="event-date">
+                    <strong>25</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>CodeFest 2026</h3>
+                    <p>
+                        Organized by Coding Club. Participate in coding
+                        challenges and win exciting prizes.
+                    </p>
+                    <span>📍 Computer Science Lab</span>
+                </div>
+            </div>
+
+
+            <div class="event-card">
+                <div class="event-date">
+                    <strong>30</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Photography Exhibition</h3>
+                    <p>
+                        Photography Club presents a collection of
+                        creative photographs by students.
+                    </p>
+                    <span>📍 College Auditorium</span>
+                </div>
+            </div>
+
+
+            <div class="event-card">
+                <div class="event-date">
+                    <strong>05</strong>
+                    <span>OCT</span>
+                </div>
+
+                <div class="event-content">
+                    <h3>Inter-College Sports Meet</h3>
+                    <p>
+                        Sports Club organizes an inter-college sports
+                        competition.
+                    </p>
+                    <span>📍 College Sports Ground</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Registration Section -->
+    <section id="register" class="section registration-section">
+
+        <div class="section-title">
+            <h2>Club Membership Registration</h2>
+            <p>Register to become a member of your favorite club.</p>
+        </div>
+
+        <div class="form-container">
+
+            <form id="registrationForm">
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="studentEmail">Email</label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="Enter your student ID"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="clubSelect">Select Club</label>
+
+                    <select id="clubSelect" required>
+                        <option value="">-- Select a Club --</option>
+                        <option value="Coding Club">Coding Club</option>
+                        <option value="Photography Club">Photography Club</option>
+                        <option value="Sports Club">Sports Club</option>
+                        <option value="Literary Club">Literary Club</option>
+                        <option value="Music Club">Music Club</option>
+                        <option value="Social Service Club">
+                            Social Service Club
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="message">Why do you want to join?</label>
+
+                    <textarea
+                        id="message"
+                        rows="4"
+                        placeholder="Tell us about your interest..."
+                    ></textarea>
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Register Now
+                </button>
+
+            </form>
+
+            <p id="successMessage" class="success-message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Have questions? Get in touch with the club administration.</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Address</h3>
+                <p>College Campus, Main Block</p>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>clubs@college.edu</p>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">📞</div>
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>CampusClubs</h3>
+
+            <p>
+                College Club Management Portal
+            </p>
+
+            <p>
+                © 2026 College Club Management Portal. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Club Details Modal -->
+    <div id="clubModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <h3>Club Activities</h3>
+
+            <ul id="modalActivities"></ul>
+
+            <p>
+                <strong>Contact:</strong>
+                club@college.edu
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
